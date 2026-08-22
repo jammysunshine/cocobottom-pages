@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KitWitness privacy notice</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>KitWitness — Privacy notice</h1>
+<p>Effective 22 August 2026 · Release 1.0 · Android</p>
+<p>KitWitness records the condition of rented equipment when it goes out and when it comes back: guided photographs, condition notes, a customer acknowledgement, and a sealed PDF. It works without an account. There is no server database and no automatic upload — nothing you record leaves the device unless you deliberately share a report or a printable label.</p>
+
+<h2>Stored on your device</h2>
+<p>Kit names and serial numbers, optional customer names and contact details, condition notes, acknowledgements and signatures, photographs, addenda, and generated PDFs and QR labels are written to the app's private database and private file storage.</p>
+
+<h2>Optional analytics</h2>
+<p>Product analytics is off until you switch it on, and consent is not assumed at first launch. When it is on, the app can send only a fixed list of workflow event names together with a result and a bucketed count. It cannot send free text. Customer details, kit identifiers, serial numbers, condition notes, media, file paths, report contents, and monetary amounts are never sent. Analytics is processed by PostHog over HTTPS.</p>
+
+<h2>Crash reporting</h2>
+<p>Crash reporting is configured at build time. When it is enabled in a release, Sentry receives the error together with the app version, the device model, and the Android version. It is configured with default personal-data collection switched off and with user context, request data, breadcrumbs, and arbitrary extra fields removed, so no customer or kit content is attached.</p>
+
+<h2>Purchases</h2>
+<p>Google Play processes payment for paid access. RevenueCat receives an anonymous installation identifier and the store entitlement state needed to unlock and restore that access. KitWitness never receives your payment-card details.</p>
+
+<h2>Permissions</h2>
+<p>The camera is requested only after you choose Capture or Open QR scanner. Photo-library access is used only to import a condition photo you select. This release does not request microphone, contacts, location, or advertising-identifier access, and microphone access is blocked outright in the build.</p>
+
+<h2>Device backup</h2>
+<p>Android's own backup and device-transfer service is turned off for this app. Handback records and condition photographs are not copied into the Google account backup of the device, and they do not travel to a new phone when you transfer one. That is deliberate: the evidence should stay on the device that captured it. The consequence is that a lost or wiped device takes its records with it, so export the records you must retain.</p>
+
+<h2>Deletion is real</h2>
+<p>Deleting a handback requires a confirmation and removes its database rows, captures, signatures, addenda, and report PDFs from the device. File erasure is recorded in a durable local queue before the record itself is removed, so an interrupted deletion is retried the next time the app opens rather than leaving orphaned photographs behind. Copies you have already shared are controlled by whoever received them and must be deleted separately.</p>
+
+<h2>Your customers' information</h2>
+<p>You decide what customer information to enter. You are responsible for having a proper basis to collect and keep it and for answering any request a customer makes about it. We hold no copy and cannot answer such a request for you.</p>
+
+<h2>Children</h2>
+<p>KitWitness is a tool for equipment-rental operators. It is not directed to children and collects nothing about them.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="delete-data.html">Delete your data</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>

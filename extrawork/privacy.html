@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExtraWork privacy notice</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>ExtraWork — Privacy notice</h1>
+<p>Effective 22 August 2026 · Release 0.1 · Android</p>
+<p>ExtraWork helps a business document extra work discovered during a job and get the customer's answer on it in writing. This notice explains what the app does with information.</p>
+
+<h2>What you put in</h2>
+<p>A record may contain your business details, the customer's name and contact details, a job reference and address, a description of the work, prices and tax settings, photographs, the approval decision, a typed or drawn signature, timestamps, and the revision history. You decide what to enter. The business using the app is responsible for having a proper basis to collect and use that information and for answering any request its customer makes about it.</p>
+
+<h2>Stored on your device</h2>
+<p>Drafts, customer and job details, photographs, approval records, and preferences are written to the app's private storage. The in-person approval workflow needs no account and no network. A per-install identifier is held in the Android keystore rather than in the database.</p>
+
+<h2>Remote approval is not enabled in this release</h2>
+<p>ExtraWork can be built with an optional remote-approval service, so that a customer who is not on site can review and respond through a link. <strong>This release ships without that service configured</strong>: the app reports remote approval as unavailable, and every approval happens in person on the device. If a later release enables it, the frozen authorisation and the media you select would be uploaded to that service so the customer can respond without creating an account; links would use unguessable, expiring, revocable tokens stored as a one-way hash; the business user would sign in by emailed one-time code; and the account screen would offer permanent deletion of the remote data. This notice and the Play Data safety declaration will be updated before any release that turns it on.</p>
+
+<h2>Camera, photos, microphone, and speech</h2>
+<p>Camera and photo-library access are requested only when you choose to add job evidence. Microphone and speech-recognition access are requested only when you choose voice drafting, and the result is an editable text draft — the app does not retain the audio. The device's own speech service processes that audio under its own settings and terms.</p>
+
+<h2>Optional analytics</h2>
+<p>Product analytics is off until you switch it on in Settings. When it is on, the app sends only coarse workflow events — that an authorisation was created, approved, or exported — and nothing else. Customer identity, contact details, addresses, scope text, prices, photographs, signatures, file locations, and approval-link secrets are never sent. Autocapture, session replay, application-lifecycle capture, and IP-based geolocation are switched off. Turning analytics off costs you no functionality. Analytics is processed by PostHog over HTTPS.</p>
+
+<h2>Crash reporting</h2>
+<p>Crash reporting is configured at build time. When it is enabled in a release, Sentry receives the error together with the app version, the device model, and the Android version. It is configured with default personal-data collection switched off and with user context, request data, breadcrumbs, and arbitrary extra fields removed, so no customer or job content is attached.</p>
+
+<h2>Purchases</h2>
+<p>Google Play processes payment for Pro. RevenueCat receives an anonymous installation identifier and the store entitlement state needed to unlock and restore Pro. ExtraWork never receives your payment-card details. Existing records stay readable and exportable if Pro access ends.</p>
+
+<h2>Device backup</h2>
+<p>Android's own backup service is switched off for this app, so records and job media stay in the app sandbox rather than being copied into a Google account backup. An export you create and share is outside that boundary — the recipient you choose controls that copy.</p>
+
+<h2>Retention and deletion</h2>
+<p>Local information stays on the device until you use the in-app deletion control, clear the app's data, or uninstall the app. The in-app control removes the local database, private job media, cached exports, stored approval links, the local account session, the analytics preference, and the diagnostic install identifier, then recreates an empty database with the built-in starter pricebook. It does not recall an export you have already sent.</p>
+
+<h2>Your controls</h2>
+<p>You can switch analytics off in Settings, export a versioned JSON copy of your records including the embedded photo bytes, and permanently delete all local data. Purchases stay with Google Play and can be restored.</p>
+
+<h2>Children</h2>
+<p>ExtraWork is a business tool. It is not directed to children and collects nothing about them.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="delete-data.html">Delete your data</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>
