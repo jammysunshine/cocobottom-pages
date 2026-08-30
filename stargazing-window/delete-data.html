@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stargazing Window delete your data</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>Stargazing Window — Delete your data</h1>
+<p>Effective 30 August 2026 · Release 1.0 · Android</p>
+<p>Everything Stargazing Window stores is held on your device. There is no account and no server copy, so deletion happens entirely on the phone.</p>
+
+<h2>Delete a saved plan</h2>
+<p>From the planner home screen tap the saved-plans button at the bottom — it is labelled "Saved plans" followed by your plan count, for example "Saved plans (1/1 free)" — then open the plan with "Open saved plan", scroll to the bottom and tap <strong>Delete this plan</strong>. A confirmation appears titled "Delete this plan?" with the choices <strong>Keep plan</strong> and <strong>Delete plan</strong>. Deleting removes the plan together with its note, its checklist rows, its frozen observing window, and its frozen forecast snapshot, and it also cancels the local reminder that plan had scheduled with Android. It cannot be undone. There is no delete control on the saved-plans list itself.</p>
+
+<h2>Remove a saved place</h2>
+<p>On the planner home screen, each saved place has a <strong>Remove</strong> button beside it, labelled with the place name. Confirming at the "Remove saved place?" dialog — <strong>Keep place</strong> or <strong>Remove saved place</strong> — removes that place from your list. Saved plans keep their own location snapshot, so removing a place does not alter a plan you already saved.</p>
+
+<h2>Remove a checklist row</h2>
+<p>Inside a saved plan, each gear or comfort row has a <strong>Remove</strong> button labelled with the row name. Confirming at the "Remove checklist row?" dialog — <strong>Keep row</strong> or <strong>Remove row</strong> — deletes that row from the plan.</p>
+
+<h2>Delete everything by removing the app</h2>
+<p>There is no single "delete all data" or "erase everything" control in this app. To clear the lot, uninstall Stargazing Window from Android. That removes its private storage entirely: every saved place, plan, note, checklist, preference, the cached forecast snapshot, and any PDF still sitting in the app's temporary cache. Android's own backup is switched off for this app, so there is no Google account backup copy to clear afterwards. Export anything you want to keep first.</p>
+
+<h2>Turning off analytics</h2>
+<p>There is nothing to turn off. This build ships with no analytics key, so no analytics events are ever sent and no analytics on/off control is shown. The Settings screen (reached with "Preferences and source status") states this directly under DATA AND PRIVACY. A crash-reporting library is present and does have a destination configured, but no code in the app raises a report, and any report its own crash handler produces is stripped to a fixed operational code with the event id, release, and environment — it can never carry a place, coordinate, note, checklist row, plan, or forecast. There is nothing there that identifies you or your observing spots, and nothing to delete.</p>
+
+<h2>What deletion does not reach</h2>
+<p>A PDF plan you have already exported and shared is outside the app — it now lives wherever you sent it, and must be deleted there. If you asked for a forecast, Open-Meteo received a coordinate rounded to about one kilometre; deleting your plan here does not affect any request log Open-Meteo keeps under its own policies, and that record contains no name, label, note, or plan. A reminder notification that Android has already delivered stays in your notification shade until you dismiss it.</p>
+
+<h2>What we hold off-device</h2>
+<p>No copy of your content. There is no account, no server database of ours, no analytics data, and no purchase record, so there is no remote copy of your places, plans, notes, or checklists for us to delete and no request you need to make to us. The single exception is the crash-reporting service described above, which may hold a stripped report — a fixed operational code with the event id, app release, and environment — if the app crashed on your device. It contains nothing you entered and nothing that names you or your observing place. If you want it deleted anyway, or want written confirmation of what is held, email <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a>.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="privacy.html">Privacy notice</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>

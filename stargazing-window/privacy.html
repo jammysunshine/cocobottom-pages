@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stargazing Window privacy notice</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>Stargazing Window — Privacy notice</h1>
+<p>Effective 30 August 2026 · Release 1.0 · Android</p>
+<p>Stargazing Window is an offline-first stargazing planner. You enter an observing place — by typing coordinates or by tapping "Use my device location" — and the app calculates Sun and Moon geometry on the phone, optionally adds a cloud-cover forecast, and ranks the coming nights' dark-sky windows. You can save one plan with a note, a gear checklist, a local reminder, and a PDF export. There is no Stargazing Window account, no server of ours, no login, and no automatic upload.</p>
+
+<h2>Stored on your device</h2>
+<p>Everything the app remembers is written to its own private app storage: your current place (label, latitude, longitude, IANA time zone, optional elevation, and how the coordinate was obtained), your saved places, your ranking preferences and cloud threshold, your observing target text, your date range, display preferences, and your saved plan — its title, the frozen observing window, the frozen forecast snapshot, your free-text note, your checklist rows, and your reminder time. The most recent Open-Meteo forecast snapshot is kept under its own separate key so that a corrupt snapshot can be discarded without touching your plans, places, or notes. The app does not take photographs, does not read your contacts, and does not write files into shared storage such as Downloads or Pictures.</p>
+
+<h2>What leaves the device</h2>
+<p>Exactly one outbound request carries anything you entered, and it only happens when you tap "Retrieve Open-Meteo forecast" or "Retrieve and compare latest forecast". That request asks api.open-meteo.com for hourly cloud cover for a coordinate. Before it is sent, your coordinate is rounded to two decimal places — roughly one kilometre — so your actual observing spot is not disclosed. The app shows you the exact rounded figures on screen before you send them: "Open-Meteo will receive {latitude}, {longitude} — rounded from your saved coordinate. No label, note, or plan is sent." Your place label, observing target, notes, checklist, saved plan, and forecast history are never transmitted. The request times out after 15 seconds. There are no ads and no advertising or attribution identifiers. The only other network destination configured in the app is the crash-reporting service described in the next section, which never receives planner content.</p>
+
+<h2>Analytics and crash reporting</h2>
+<p>No product analytics are collected in this release. An analytics library is bundled, but this build ships with no analytics project key, so the client is never created and no analytics event is ever sent anywhere. The Settings screen states this plainly — "Anonymous product analytics are not configured in this build, so no analytics events are sent" — and for the same reason no analytics on/off control appears there. A crash-reporting library is also bundled, and this build does have a crash-reporting destination configured, so that library is started when the app launches. It is started with every automatic capture surface the library offers switched off: screenshots, view hierarchy, breadcrumbs, performance traces, app-start and frame tracking, session tracking, user-interaction tracing, failed-request capture, and attached stack traces are all disabled, and personally identifying data is never attached. No code in the app calls the function that raises a report, so nothing in normal use produces one. If the library's own handler raises a report anyway — after an unexpected crash — every report is rebuilt on the way out from a closed allow-list that keeps only a fixed operational code (such as "forecast_unavailable" or "export_failed") plus the event id, release, and environment; a report carrying no recognised code is emptied. Your place, coordinates, target, notes, checklist rows, saved plan, and forecast data can never form part of one. If that changes, this page and the Google Play Data safety declaration will be updated before the build ships.</p>
+
+<h2>Purchases</h2>
+<p>Nothing is for sale in this release. There is no store product, no purchase button, no price, and no restore path, and no screen in the app reaches a billing or store library at all. No payment or entitlement information is collected or received. See the <a href="purchase-help.html">purchase help page</a>.</p>
+
+<h2>Permissions</h2>
+<p>Location (coarse and fine) is requested only when you tap "Use my device location", and Android shows the reason: "Use your location to calculate astronomy and request an optional local forecast." A coordinate obtained that way stays on the device until you choose to retrieve a forecast, and only the rounded version is sent. Notification permission is used only for the reminder you schedule yourself with "Schedule local reminder"; the reminder is delivered by Android on this device and involves no server. Internet access is used only for the Open-Meteo request described above and for the crash-reporting library described above. There is no camera, microphone, contacts, or background-location access. You can change any of these in Android Settings.</p>
+
+<h2>PDF export and sharing</h2>
+<p>"Export PDF plan" builds the PDF on the phone and hands it to the Android share sheet. The app itself uploads nothing — the message it shows says so: "PDF generated locally. Android share sheet opened; no plan was uploaded." Where the file goes after that depends entirely on the app you pick from the share sheet, and that app's own privacy terms then apply.</p>
+
+<h2>Device backup</h2>
+<p>Android's own backup service is switched off for this app, so your places, plans, and notes are not copied into a Google account backup. That also means a lost, reset, or replaced device takes unexported plans with it — export the PDF of anything you need to keep.</p>
+
+<h2>Retention and deletion</h2>
+<p>Local content stays until you remove it in the app or uninstall the app. There is no "delete everything" control; deletion is per record, and uninstalling clears the lot. See the <a href="delete-data.html">deletion page</a> for exactly what each route removes.</p>
+
+<h2>Security</h2>
+<p>Planner content lives in application-private storage protected by Android's own platform sandboxing. No system is perfectly secure, and device loss, app removal, or storage failure can make unexported plans unrecoverable.</p>
+
+<h2>Children and international processing</h2>
+<p>Stargazing Window is a planning tool for observers and is not directed to children. Two third parties can be involved. Open-Meteo receives a rounded coordinate when you ask for a forecast. Sentry, the crash-reporting service, is the configured destination for the stripped operational reports described above; it receives nothing at all unless the app crashes, and never your planner content. Both may process what they receive outside your country under their own published terms.</p>
+
+<h2>Not safety advice</h2>
+<p>A ranked window describes sky conditions only. As the app itself states: "A promising window is not road, wildlife, access, emergency, travel, or personal-safety advice."</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="delete-data.html">Delete your data</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colour Match Board privacy notice</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>Colour Match Board — Privacy notice</h1>
+<p>Effective 30 August 2026 · Release 1.0 · Android</p>
+<p>Colour Match Board is an offline notebook for a decorating or craft decision. You create a named project, type in the hex codes of the paint, tile, fabric or other material colours you are choosing between, add notes, tags and lighting context, then mark one as chosen and the rest as rejected. All of that stays on your device. There is no Colour Match Board account, no server, and no sync.</p>
+
+<h2>Stored on your device</h2>
+<p>Project names, swatch names, hex and RGB values, notes, tags, lighting context, decision reasons and your chosen or rejected marks are written to a single private database inside the app's own sandbox, <code>colour-match-board.db</code>. Every swatch in this release also carries the same fixed source label, <em>entered manually</em>, because typing a hex value is the only way to add one. A small settings table alongside it holds a single row: your answer to the diagnostics question. Nothing in either table is uploaded.</p>
+
+<h2>Colours are typed in, not photographed</h2>
+<p>This release has no camera or photo feature. You enter hex values by hand. The app declares no camera permission and no photo or external-storage permission — those are stripped from the Android manifest — so it cannot read your gallery or take a picture, and it stores no images. Colour rendering on screen is an approximation of a physical material and should be checked against a real sample.</p>
+
+<h2>Diagnostics</h2>
+<p>Settings &amp; privacy has a switch labelled <strong>Send anonymous diagnostics</strong>. It is off unless you turn it on, and a preference that cannot be read is treated as a refusal.</p>
+<p>In this release no analytics destination is configured, so switching it on sends no analytics events anywhere. A crash destination (Sentry) is configured and would start only while the switch is on, but it is deliberately reduced to almost nothing: no personal information, no screenshots, no view hierarchy, no stack traces, no breadcrumbs, no native crash handling, and every event is rebuilt from scratch and discarded unless it carries one of six fixed operation codes — leaving only a severity level, that code, an event identifier, and the release and environment names. No screen in this release reports such a failure, so in practice nothing is sent. If any of that changes, this page and the Play Data safety declaration will say so before the build ships.</p>
+<p>The app cannot send your content even in principle: event names must be one of eight fixed strings, and properties are dropped unless both the key and the value are on a short fixed allow list. Project names, swatch names, hex or RGB values, notes, tags, decision reasons and file paths can never appear in a payload.</p>
+
+<h2>Purchases</h2>
+<p>Colour Match Board Pro is a one-time purchase handled by Google Play. When you open the Pro screen, or tap the buy or restore control, RevenueCat receives an anonymous installation identifier and the store transaction and entitlement information the app needs to offer the product and unlock access. No board content is sent. The app never receives your payment-card details.</p>
+
+<h2>Permissions</h2>
+<p>The app declares two Android permissions and no more: internet access &mdash; used for the store and, if you enable diagnostics, for the crash destination &mdash; and vibration, which comes from a bundled library and which no screen in this release triggers. Camera, microphone, overlay and external-storage permissions are removed when the Android manifest is built. The app asks for no runtime permissions at all.</p>
+
+<h2>Device backup</h2>
+<p>Android's own backup service is switched off for this app, so your boards stay in the app sandbox rather than being copied into a Google account backup. That also means a lost, reset or wiped device takes your boards with it, and uninstalling removes them.</p>
+
+<h2>Retention and deletion</h2>
+<p>Local content stays until you delete a project or swatch, use <strong>Delete everything</strong> in Settings &amp; privacy, or remove the app. There is no copy held anywhere else, so there is nothing for us to retrieve or restore. Deleting local data does not undo a Google Play purchase, and does not erase records that Google or RevenueCat retain under their own policies.</p>
+
+<h2>Security</h2>
+<p>Board content uses application-private storage and Android's own platform protections. No system is perfectly secure, and device loss, app removal, or storage failure can make your boards unrecoverable.</p>
+
+<h2>Children and international processing</h2>
+<p>Colour Match Board is a decorating and craft planning tool and is not directed to children. Google and RevenueCat may process data in countries other than yours under their published safeguards.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="delete-data.html">Delete your data</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>

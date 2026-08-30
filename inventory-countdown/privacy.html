@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inventory Countdown privacy notice</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>Inventory Countdown — Privacy notice</h1>
+<p>Effective 30 August 2026 · Release 1.0 · Android</p>
+<p>Inventory Countdown is a local stock ledger. You list the items you keep on hand with a quantity, a unit and a reorder threshold, record every count or adjustment as a dated entry with a reason, and set reminders and low-stock warnings. All of that is held on the phone itself. There is no Inventory Countdown account, no server, and no automatic upload — as the "Where your stock records live" card in <strong>Settings &amp; privacy</strong> says, nobody at this end can see your ledger and support cannot retrieve it for you.</p>
+
+<h2>Stored on your device</h2>
+<p>Item names, units, quantities, reorder thresholds, SKUs, scanned barcode values, supplier notes and contact references, reference costs, item photos, count lists, count sessions, the full immutable history of adjustments (old and new quantity, delta, reason, your free-text note, and the time it was recorded), and reminder schedules are written to a private SQLite database file named <code>inventory-countdown.db</code> in the app's own storage. Item photos are copied out of the picker cache into the app's private document storage. A settings table holds only two values: your answer to the diagnostics switch, and a local snapshot of whether Pro is unlocked.</p>
+
+<h2>Optional diagnostics</h2>
+<p>Diagnostics are off until you turn on <strong>Send anonymous diagnostics</strong> in <strong>Settings &amp; privacy</strong>. The switch reads "Off — nothing is sent." until you change it. If the stored answer is missing or unreadable, the app treats it as a refusal.</p>
+<p>When the switch is on, the only thing this build can send is a single scrubbed warning event to Sentry carrying one operation code from a closed list — <code>ledger_unavailable</code>, <code>ledger_write_failed</code>, <code>reminder_schedule_failed</code>, <code>csv_read_failed</code>, <code>csv_write_failed</code>, <code>photo_write_failed</code>, or <code>store_unavailable</code> — together with an event id and the release and environment names. The event is not filtered, it is rebuilt from nothing, so anything not on that list never reaches the network. Personally identifying data is disabled, performance and profiling sampling are set to zero, and screenshots, view hierarchies, stack traces, native crash handling, session tracking and breadcrumbs are all switched off.</p>
+<p>A product-analytics adapter (PostHog) is compiled into the app but <strong>no analytics destination is configured in this release</strong>: there is no PostHog key in the build, so turning the switch on sends no analytics anywhere. If that ever changes, this page and the Play Data safety declaration will say so before the build ships. Even if a destination were configured, the adapter can only emit ten allowlisted event names — such as an export or import preview being opened, a paywall being viewed, or a purchase or restore completing — with at most one allowlisted value alongside, geolocation lookup disabled, no session replay, no lifecycle or deep-link capture, and no persistence to disk. Item names, quantities, units, SKUs, barcodes, suppliers, list names, file names and file paths are never included in either adapter.</p>
+<p>Turning the switch off detaches the analytics adapter and closes the crash client before the new answer is even written.</p>
+
+<h2>Purchases</h2>
+<p>Google Play processes payment. RevenueCat receives an anonymous installation identifier and the store transaction and entitlement information the app needs to show the product, unlock Pro, and restore a previous purchase. The billing SDK is only started when you open <strong>Inventory Countdown Pro</strong> and act there. Inventory Countdown never receives your payment-card details.</p>
+
+<h2>Permissions</h2>
+<p>The camera is used only on the <strong>Scan</strong> screen and only to read a barcode. That screen asks before it opens the camera — "Camera access is requested only to scan a barcode. You can type a code instead." — and typing a code by hand always works instead. Scanning takes no picture and keeps none: only the decoded barcode value, and only if you save it on an item. Item photos come from the Android system photo picker, opened only when you tap <strong>Choose photo</strong> or <strong>Replace photo</strong>; the picker hands the app the single image you choose, which is then copied into the app's private storage. Internet access is present because of the crash and billing services described above. Sharing happens only when you tap <strong>Export CSV</strong>. You can change app permissions in Android Settings.</p>
+
+<h2>Reminders</h2>
+<p>Count reminders are local Android notifications, scheduled on the device on the "Inventory attention" channel. Nothing about a reminder is sent off the device.</p>
+
+<h2>Device backup</h2>
+<p>Android's own backup service is switched off for this app, so your ledger stays in the app sandbox rather than being copied into a Google account backup. That also means a lost or reset device takes your stock records with it — export what you need to keep.</p>
+
+<h2>Retention, export, and deletion</h2>
+<p>Local content stays until you delete an item, use <strong>Delete everything</strong> in <strong>Settings &amp; privacy</strong>, or remove the app. With Pro, <strong>Import &amp; export</strong> can write your active catalogue to a CSV file — one row per active item carrying its name, SKU, barcode, unit, quantity, reorder threshold, supplier name, supplier contact reference, ordering note, lead-time note, reference cost, currency and status. That file is created in private storage and handed to the Android share sheet only when you share it, and whatever you send it to is then outside this app. Deleting local data does not remove a Pro purchase from your Google Play account, and does not erase records that Google, RevenueCat or Sentry retain under their own policies.</p>
+
+<h2>Security</h2>
+<p>Your ledger uses application-private storage and Android's own platform protections. No system is perfectly secure, and device loss, app removal, or storage failure can make unexported records unrecoverable.</p>
+
+<h2>Children and international processing</h2>
+<p>Inventory Countdown is a stock-counting tool and is not directed to children. Google, RevenueCat and Sentry may process data in countries other than yours under their published safeguards.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="delete-data.html">Delete your data</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>

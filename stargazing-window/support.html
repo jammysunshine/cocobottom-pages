@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stargazing Window support</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>Stargazing Window — Support</h1>
+<p>Effective 30 August 2026 · Release 1.0 · Android</p>
+
+<h2>Keep your plans safe</h2>
+<p>Stargazing Window keeps everything on this device, and Android's own backup is deliberately switched off for it. There is no account to restore from. Use "Export PDF plan" and save the result somewhere durable before you replace the device, reset it, or remove the app.</p>
+
+<h2>Location is unavailable or refused</h2>
+<p>Location is optional. If "Use my device location" fails, the app tells you that manual coordinates remain available — type the latitude, longitude, and IANA time zone yourself and tap "Use these manual coordinates", or "Save this place" to keep it. To grant access instead, open Android Settings, find Stargazing Window, and allow Location, then make sure device location services are on.</p>
+
+<h2>No forecast, or the forecast will not load</h2>
+<p>Cloud cover comes from Open-Meteo and needs a connection; the request gives up after 15 seconds. Rate-limit, timeout, and malformed-response cases are reported as recoverable errors rather than treated as clear skies, and a first launch with no network shows no current forecast rather than pretending conditions are good. Sun and Moon geometry is calculated on the phone, so ranking still works offline — darkness and moon figures remain, and cloud shows as unavailable. Retry with "Retrieve Open-Meteo forecast" when you have signal. The current state of the source is always spelled out on the Settings screen, reached with "Preferences and source status".</p>
+
+<h2>My saved plan did not update after a new forecast</h2>
+<p>That is intended. A saved plan freezes the forecast snapshot it was made from so a later retrieval cannot silently replace your evidence. To see what has changed, open the plan and tap "Retrieve and compare latest forecast" — the comparison is reported alongside the frozen original, which stays as it was.</p>
+
+<h2>The reminder did not arrive</h2>
+<p>"Schedule local reminder" uses an Android notification on this device, timed to your place's own time zone. Check that notifications are allowed for Stargazing Window in Android Settings, and that battery optimisation is not suspending the app. If the reminder could not be scheduled the app says so rather than pretending it was set. Deleting a plan cancels its reminder.</p>
+
+<h2>The PDF export failed or nothing was shared</h2>
+<p>The PDF is generated on the phone and then handed to the Android share sheet. The app reports each outcome separately — generation failed, sharing unavailable, share failed, or shared — so it never claims a share sheet opened when it did not. Free some storage and try again, and if no share target is available, the PDF was still created locally. Nothing is uploaded by the app either way.</p>
+
+<h2>Times look wrong</h2>
+<p>Window times are shown in the observing place's time zone, not your phone's. Check the IANA time zone you entered for the place. You can switch between "Use 24-hour time" and "Use 12-hour time" on the Settings screen; that changes display only, never the saved instants or the ranking.</p>
+
+<h2>Something was reset when I opened the app</h2>
+<p>If stored data was damaged, the app recovers what it can and lists exactly what was kept or reset under LOCAL RECOVERY STATUS on the Settings screen. The forecast cache is stored separately from your plans on purpose, so a corrupt snapshot can be discarded without losing places, plans, or notes.</p>
+
+<h2>Purchases</h2>
+<p>Nothing is for sale in this release, so there is nothing to buy, restore, or cancel. See the <a href="purchase-help.html">purchase help page</a>.</p>
+
+<h2>Export or delete your data</h2>
+<p>Plans, places, and checklist rows are deleted individually in the app; uninstalling removes everything. See the <a href="delete-data.html">deletion page</a>.</p>
+
+<h2>Please plan safely</h2>
+<p>A promising window is a statement about the sky. As the app puts it: "A promising window is not road, wildlife, access, emergency, travel, or personal-safety advice." Tell someone where you are going.</p>
+
+<h2>Contact</h2>
+<p>Email <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> with the app version, your device model, the Android version, which screen you were on, and what you did. Please do not send your exact home or observing coordinates, or your plan notes, unless they are genuinely necessary to explain the problem.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="delete-data.html">Delete your data</a> · <a href="privacy.html">Privacy notice</a> · <a href="purchase-help.html">Purchase help</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>

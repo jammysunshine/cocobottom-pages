@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cable Labeler delete your data</title><style>body{max-width:760px;margin:48px auto;padding:0 20px;font:16px/1.6 system-ui;color:#15211d}h1,h2{color:#16372f}a{color:#1a6b57}ol,ul{padding-left:20px}hr{border:0;border-top:1px solid #d8e2de;margin:36px 0}</style></head>
+<body>
+<h1>Cable Labeler — Delete your data</h1>
+<p>Effective 30 August 2026 · Release 1.0 · Android</p>
+<p>Cable Labeler has no account and no server. Everything you catalogue is on your device, so every deletion route below is one you perform yourself, and none of them needs our help.</p>
+
+<h2>Delete one cable</h2>
+<p>Open the cable from the Cable library, scroll down to <strong>Delete cable…</strong> and tap it. The app shows you what will go and waits; tap <strong>Confirm delete cable</strong> to remove it, or <strong>Keep cable</strong> to stop. That removes the cable record and its change history, and deletes any photo the app owns for it along with any local print file that belonged to that cable alone.</p>
+<p>Two things deliberately survive a single-cable deletion, and the app tells you so before it asks. Its identifier codes are <em>revoked</em> rather than erased, so a sticker still stuck to the real cable reads as no longer in use instead of quietly resolving to some other cable. And its existing local label-history entries stay on this device as an immutable record — they are frozen against further changes rather than removed, though the file they pointed at is cleared. If you want those gone as well, use <strong>Erase everything</strong> below, which does drop them. There is no delete control on the library list itself.</p>
+
+<h2>Erase everything in the app</h2>
+<p>Open <strong>Settings &amp; privacy</strong> from the Cable library and find the card headed <strong>Erase everything on this device</strong>. Tap <strong>Erase everything</strong>, then confirm with <strong>Yes, erase everything</strong> — or back out with <strong>Cancel and keep my cables</strong>. The button reads "Erasing…" while it works, and afterwards the screen reports how many cables were removed, together with every code, print job, location and saved report.</p>
+<p>That single action drops every catalogue table — cables, locations, identifiers, change history, print jobs and their per-label rows, saved filter reports, retained legacy rows and label history — and deletes any photo or generated label file the app owns in its own private storage. The database is configured with <code>secure_delete</code>, so the bytes are overwritten rather than merely unlinked. Identifier codes are dropped outright rather than kept as tombstones, so no readable index of what you deleted is left behind.</p>
+<p>The app is blunt about the consequences: "Stickers already applied to real cables will scan as unavailable. This cannot be undone, and because nothing was ever uploaded there is no copy to restore from."</p>
+
+<h2>Delete everything by removing the app</h2>
+<p>Uninstalling Cable Labeler removes its private database and files. Android's own backup is switched off for this app, so there is no device-backup copy to clear afterwards.</p>
+
+<h2>Turn off diagnostics</h2>
+<p>Diagnostics are off unless you turned them on. In <strong>Settings &amp; privacy</strong>, the switch labelled <strong>Send anonymous diagnostics</strong> controls both product analytics and crash reporting together. Switching it off stops delivery straight away — the app cuts the connection before it even saves your answer. Note that no analytics key is configured in this release, so analytics events are not sent in this build in either position of the switch; the switch's live effect here is on crash reporting.</p>
+
+<h2>What deletion does not reach</h2>
+<p>Two things are kept on purpose when you erase everything, and the app says so on screen: your <strong>diagnostics answer</strong> and any <strong>Pro entitlement</strong>. A purchase belongs to your Google Play account, not to the catalogue, so erasing your cables does not throw away what you paid for and does not cancel or refund anything. Physical labels you have already printed and stuck onto real cables are objects in the world — the app cannot reach them, and after an erase they will scan as unavailable. Anything you copied out of the app by hand is outside it and must be deleted wherever it now lives.</p>
+
+<h2>What we hold off-device</h2>
+<p>There is no account, no server and no cloud copy of your catalogue, so there is nothing for us to delete and nothing for us to hand back. As the app's Support card puts it: "Support can answer questions about how the app works, but cannot see, recover or delete your cables — those never leave this device. If you need everything gone, use Erase everything above; uninstalling also removes it."</p>
+<p>The only records held elsewhere are: Google Play and RevenueCat hold the anonymous purchase entitlement for your install; and if you switched diagnostics on, Sentry may hold scrubbed crash diagnostics whose message text has been replaced with "Application error" and from which cable content, file paths and identifier codes have been stripped. No analytics provider holds anything from this build, because no analytics key is configured. To ask for any of these to be deleted, or for written confirmation of what is held, email <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a>.</p>
+<hr>
+<p style="font-size:14px;color:#5a6b66">Contact: <a href="mailto:cocobottom2012@gmail.com">cocobottom2012@gmail.com</a> · <a href="privacy.html">Privacy notice</a> · <a href="purchase-help.html">Purchase help</a> · <a href="support.html">Support</a> · <a href="terms.html">Terms of use</a></p>
+</body>
+</html>
